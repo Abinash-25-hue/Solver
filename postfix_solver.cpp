@@ -47,6 +47,8 @@ int main ()
     vector <string> test_1;
     test_1.push_back("(2+3)*4");
     test_1.push_back("(2+3*(4))");
+    test_1.push_back("(2+3*(4)");
+    test_1.push_back("2+3*(4))");
     test_1.push_back("((()(())))");
     test_1.push_back("{}[]()");
     test_1.push_back("{[[]]({}[])}");
