@@ -52,6 +52,19 @@ int main ()
     test_1.push_back("{[[]]({}[])}");
     test_1.push_back("{(})");
     test_1.push_back("");
-    
+
+    for (string str : test_1)
+    {
+        if (validity_checker(str))
+        {
+            cout<< "True";
+        }
+        else
+        {
+            cout<< "False";
+        }
+        cout<< endl;
+    }
+
     return 0;
 }
