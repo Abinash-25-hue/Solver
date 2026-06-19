@@ -42,6 +42,53 @@ bool validity_checker (string st)
     return false;
 }
 
+double number_returner (string st, int start)
+{
+    stack <int> stuc;
+    double final = 0, divid = 0.1;
+    int ascii = st[start], mult = 1;
+
+    while (ascii >= 48 && ascii <= 57)
+    {
+        int num = ascii - 48;
+        stuc.push(num);
+        ascii = st[++start];
+    }
+    while (stuc.empty() == false)
+    {
+        int temp = stuc.top();
+        final += (temp * mult);
+        mult *= 10;
+        stuc.pop();
+    }
+
+    if (ascii == 46)
+    {
+        ascii = st[++start];
+        while (ascii >= 48 && ascii <= 57)
+        {
+            int num = ascii - 48;
+            stuc.push(num);
+            ascii = st[++start];
+        }
+        stack <int> deci;
+        while (stuc.empty() == false)
+        {
+            deci.push(stuc.top());
+            stuc.pop();
+        }
+        while (deci.empty() == false)
+        {
+            int temp = deci.top();
+            final += (temp * divid);
+            divid /= 10;
+            deci.pop();
+        }
+    }
+
+    return final;
+}
+
 int main ()
 {
     vector <string> test_1;
