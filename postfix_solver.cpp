@@ -115,5 +115,9 @@ int main ()
         cout<< endl;
     }
 
+    double six_eight = number_returner("68", 0), d = number_returner("12.345", 0);
+    cout<< endl<< six_eight<< endl;
+    cout<< d<< endl;
+
     return 0;
 }
