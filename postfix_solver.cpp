@@ -48,7 +48,7 @@ double number_returner (string st, int start)
     double final = 0, divid = 0.1;
     int ascii = st[start], mult = 1;
 
-    while (ascii >= 48 && ascii <= 57)
+    while (ascii >= 48 && ascii <= 57)\
     {
         int num = ascii - 48;
         stuc.push(num);
