@@ -136,5 +136,18 @@ int main ()
     cout<< endl<< six_eight<< endl;
     cout<< d<< endl;
 
+    vector <int> test_2;
+    test_2.push_back(precedence_giver('^'));
+    test_2.push_back(precedence_giver('*'));
+    test_2.push_back(precedence_giver('+'));
+    test_2.push_back(precedence_giver('a'));
+    test_2.push_back(precedence_giver(' '));
+
+    cout<< endl;
+    for (int x : test_2)
+    {
+        cout<< x<< endl;
+    }
+
     return 0;
 }
