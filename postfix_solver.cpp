@@ -108,9 +108,13 @@ int precedence_giver (char symbol)
 
 string string_slicer (string st, int start, int end)
 {
-    if (start > end || start < 0)
+    if (start > end)
     {
         return "";
+    }
+    if (start < 0)
+    {
+        start = 0;
     }
     string final = "";
     for (int index = start; index < end && index < st.size(); index++)
