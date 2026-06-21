@@ -108,7 +108,7 @@ int precedence_giver (char symbol)
 
 string string_slicer (string st, int start, int end)
 {
-    if (start > end)
+    if (start > end || start < 0)
     {
         return "";
     }
