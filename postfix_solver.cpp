@@ -113,7 +113,7 @@ string string_slicer (string st, int start, int end)
         return "";
     }
     string final = "";
-    for (int index = start; index < end; index++)
+    for (int index = start; index < end && index < st.size(); index++)
     {
         final += st[index];
     }
