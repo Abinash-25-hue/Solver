@@ -163,5 +163,18 @@ int main ()
         cout<< x<< endl;
     }
 
+    vector <string> test_3;
+    test_3.push_back(string_slicer("abcde", 1, 4));
+    test_3.push_back(string_slicer("abcde", 0, 0));
+    test_3.push_back(string_slicer("abcde", 1, 9));
+    test_3.push_back(string_slicer("abcde", -7, 4));
+    test_3.push_back(string_slicer("abcde", 4, 1));
+
+    cout<< endl;
+    for (string x : test_3)
+    {
+        cout<< x<< endl;
+    }
+
     return 0;
 }
