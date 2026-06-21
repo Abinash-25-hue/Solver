@@ -106,6 +106,16 @@ int precedence_giver (char symbol)
     return 0;
 }
 
+string string_slicer (string st, int start, int end)
+{
+    string final = "";
+    for (int index = start; index < end; index++)
+    {
+        final += st[index];
+    }
+    return final;
+}
+
 int main ()
 {
     vector <string> test_1;
