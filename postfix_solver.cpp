@@ -227,6 +227,27 @@ int main ()
     {
         cout<< x<< endl;
     }
+    
+    vector <string> test_4;
+    test_4.push_back("(2+3)*4");
+    test_4.push_back("(2.3 + 4)* 5.7");
+    test_4.push_back(" 2.3.4 + (5 * 3.4)");
+    test_4.push_back("2.3 + 5. - 6");
+    test_4.push_back("3* (.5 + 7)");
+    test_4.push_back(" (4 -9) * . + 7");
+    test_4.push_back("");
+
+    for (string s : test_4)
+    {
+        if (valid_decimal(s))
+        {
+            cout<< "True"<< endl;
+        }
+        else
+        {
+            cout<< "False"<< endl;
+        }
+    }
 
     return 0;
 }
