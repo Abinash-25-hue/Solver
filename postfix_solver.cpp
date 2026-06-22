@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool validity_checker (string st)
+bool valid_brackets(string st)
 {
     stack <char> s;
     for (int index = 0; index < st.size(); index++)
@@ -149,7 +149,7 @@ int main ()
 
     for (string str : test_1)
     {
-        if (validity_checker(str))
+        if (valid_brackets(str))
         {
             cout<< "True";
         }
