@@ -42,6 +42,44 @@ bool valid_brackets(string st)
     return false;
 }
 
+bool valid_decimal (string st)
+{
+    bool is_number = false;
+    int ascii, count = 0;
+
+    for (int index = 0; index < st.size(); index++)
+    {
+        ascii = st[index];
+        if (ascii >= 48 && ascii <= 57)
+        {
+            is_number = true;
+        }
+        else if (ascii == 46)
+        {
+            int temp_ascii = st[index + 1];
+            if (is_number == false && (temp_ascii < 48 || temp_ascii > 57))
+            {
+                return false;
+            }
+            count++;
+        }
+        else if (ascii < 48 || ascii > 57)
+        {
+            if (is_number)
+            {
+                is_number = false;
+                count = 0;
+            }
+        }
+
+        if (count > 1)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 double number_returner (string st, int start)
 {
     stack <int> stuc;
