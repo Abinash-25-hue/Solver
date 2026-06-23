@@ -42,6 +42,26 @@ bool valid_brackets(string st)
     return false;
 }
 
+bool valid_symbol (string st)
+{
+    for (int index = 0; index < st.size(); index++)
+    {
+        if ((st[index] < '0' || st[index] > '9') && st[index] != '.')
+        {
+            return false;
+        }
+        if (st[index] != '+' && st[index] != '-' && st[index] != '*' && st[index] != '/' && st[index] != ' ')
+        {
+            return false;
+        }
+        if (st[index] != '(' && st[index] != ')')
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 bool valid_decimal (string st)
 {
     bool is_number = false;
