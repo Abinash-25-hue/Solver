@@ -50,7 +50,7 @@ bool valid_symbol (string st)
         {
             return false;
         }
-        if (st[index] != '+' && st[index] != '-' && st[index] != '*' && st[index] != '/' && st[index] != ' ')
+        if (st[index] != '+' && st[index] != '-' && st[index] != '*' && st[index] != '/' && st[index] != ' ' && st[index] != '^')
         {
             return false;
         }
