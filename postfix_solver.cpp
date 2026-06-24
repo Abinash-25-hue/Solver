@@ -46,17 +46,12 @@ bool valid_symbol (string st)
 {
     for (int index = 0; index < st.size(); index++)
     {
-        if ((st[index] < '0' || st[index] > '9') && st[index] != '.')
+        if ((st[index] < '(' || st[index] > '9') || st[index] == ',')
         {
-            return false;
-        }
-        if (st[index] != '+' && st[index] != '-' && st[index] != '*' && st[index] != '/' && st[index] != ' ' && st[index] != '^')
-        {
-            return false;
-        }
-        if (st[index] != '(' && st[index] != ')')
-        {
-            return false;
+            if (st[index] != '^')
+            {
+                return false;
+            }
         }
     }
     return true;
