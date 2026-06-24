@@ -48,7 +48,7 @@ bool valid_symbol (string st)
     {
         if ((st[index] < '(' || st[index] > '9') || st[index] == ',')
         {
-            if (st[index] != '^')
+            if (st[index] != '^' && st[index] != ' ')
             {
                 return false;
             }
