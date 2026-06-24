@@ -263,6 +263,27 @@ int main ()
             cout<< "False"<< endl;
         }
     }
+    cout<< endl;
+    
+    vector <string> test_5;
+    test_5.push_back("^");
+    test_5.push_back(",");
+    test_5.push_back("(2+3)*4");
+    test_5.push_back("(2 + 3)* 4");
+    test_5.push_back("(2+x)*4");
+
+    for (string s : test_5)
+    {   
+        if (valid_symbol(s))
+        {
+            cout<< "True";
+        }
+        else
+        {
+            cout<< "False";
+        }
+        cout<< endl;
+    }
 
     return 0;
 }
