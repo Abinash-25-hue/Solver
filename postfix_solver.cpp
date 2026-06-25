@@ -57,6 +57,79 @@ bool valid_symbol (string st)
     return true;
 }
 
+bool valid_operators (string st)
+{
+    bool is_number = false, is_operator = false, was_bracket_open = false, was_bracket_closed = false;
+    if (st[0] >= '0' && st[0] <= '9')
+    {
+        is_number = true;
+    }
+    else if (st[0] == '+' || st[0] == '*' || st[0] == '/')
+    {
+        return false;
+    }
+    else if (st[0] == '-')
+    {
+        is_operator = true;
+    }
+    for (int index = 1; index < st.size(); index++)
+    {
+        char c = st[index];
+        if (c == '+' || c == '*' || c == '-' || c == '/')
+        {
+            if (is_operator == true)
+            {
+                return false;
+            }
+            else
+            {
+                is_operator = true;
+                if (is_number == true)
+                {
+                    is_number = false;
+                }
+                if (was_bracket_open == true)
+                {
+                    return false;
+                }
+                
+            }
+        }
+        if (c >= '0' && c <= '9')
+        {
+            if (is_operator == true)
+            {
+                is_operator = false;
+            
+            }
+            else if (is_operator == false)
+            {
+                return false;
+            }
+            is_number = true;
+        }
+        if (c == '(')
+        {
+            was_bracket_open = true;
+            was_bracket_closed = false;
+            if (is_number == true)
+            {
+                return false;
+            }
+            is_operator = false;
+        }
+        if (c == ')')
+        {   
+            was_bracket_closed = true;
+            was_bracket_open = false;
+            if (is_operator == true)
+            {
+                return false;
+            }
+        }
+    }
+}
+
 bool valid_decimal (string st)
 {
     bool is_number = false;
