@@ -130,6 +130,57 @@ bool valid_operators (string st)
     }
 }
 
+bool valid_operator (string str)
+{
+    bool was_operator = false;
+    bool was_number = false;
+    bool was_space = false;
+    bool was_bracket_open = false;
+    bool was_bracket_closed = false;
+
+    char c = str[0];
+    for (int index = 0; index < str.size(); index++)
+    {
+        c = str[index];
+        if (c == '+' || c == '*' || c == '/')
+        {
+            if (was_operator == true)
+            {
+                cout<< c<< "-1, ";
+                return false;
+            }
+            else
+            {
+                cout<< c<< "-2, ";
+                was_operator = true;
+                was_number = false;
+                was_space = false;
+            }
+        }
+        if (c >= '0' && c <= '9')
+        {
+            if (was_number && was_space && was_operator == false)
+            {
+                cout<< c<< "-3, ";
+                return false;
+            }
+            if (was_number == false)
+            {
+                cout<< c<< "-4, ";
+                was_number = true;
+                was_space = false;
+                was_operator = false;
+            }
+        }
+        if (c == ' ')
+        {
+            cout<< c<< "5, ";
+            was_space = true;
+        }
+    }
+    return true;
+}
+
 bool valid_decimal (string st)
 {
     bool is_number = false;
