@@ -409,5 +409,25 @@ int main ()
         cout<< endl;
     }
 
+
+    vector <string> test_6;
+    test_6.push_back("(2+3)*4");
+    test_6.push_back("(2++3)*4");
+    test_6.push_back("(2+ +3)*4");
+    test_6.push_back("(2 3)*4");
+
+    cout<< endl;
+    for (string s : test_6)
+    {
+        if (valid_operator(s))
+        {  
+            cout<< "True";
+        }  
+        else
+        {
+            cout<< "False";
+        }
+        cout<< endl;
+    }
     return 0;
 }
