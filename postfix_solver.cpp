@@ -177,6 +177,28 @@ bool valid_operator (string str)
             cout<< c<< "5, ";
             was_space = true;
         }
+        if (c == '(')
+        {
+            was_bracket_open = true;
+            was_number = false;
+            was_space = false;
+            was_operator = false;
+        }
+        if (c == ')')
+        {
+            if (was_operator)
+            {
+                return false;
+            }
+            else
+            {
+                was_bracket_closed = true;
+                was_number = false;
+                was_space = false;
+                was_operator = false;
+            }
+        }
+
     }
     return true;
 }
