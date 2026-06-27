@@ -437,6 +437,12 @@ int main ()
     test_6.push_back("(2++3)*4");
     test_6.push_back("(2+ +3)*4");
     test_6.push_back("(2 3)*4");
+    test_6.push_back("(2 +)*4");
+    test_6.push_back("(2 + )*4");
+    test_6.push_back("3 (2 +5)*4");
+    test_6.push_back("3(2 +5)*4");
+    test_6.push_back("3+(2 +5)*4"); 
+
 
     cout<< endl;
     for (string s : test_6)
