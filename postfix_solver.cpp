@@ -146,12 +146,12 @@ bool valid_operator (string str)
         {
             if (was_operator == true)
             {
-                cout<< c<< "-1, ";
+                //cout<< c<< "-1, ";
                 return false;
             }
             else
             {
-                cout<< c<< "-2, ";
+                //cout<< c<< "-2, ";
                 was_operator = true;
                 was_number = false;
                 was_space = false;
@@ -161,12 +161,12 @@ bool valid_operator (string str)
         {
             if (was_number && was_space && was_operator == false)
             {
-                cout<< c<< "-3, ";
+                //cout<< c<< "-3, ";
                 return false;
             }
             if (was_number == false)
             {
-                cout<< c<< "-4, ";
+                //cout<< c<< "-4, ";
                 was_number = true;
                 was_space = false;
                 was_operator = false;
@@ -174,7 +174,7 @@ bool valid_operator (string str)
         }
         if (c == ' ')
         {
-            cout<< c<< "5, ";
+            //cout<< c<< "5, ";
             was_space = true;
         }
         if (c == '(')
