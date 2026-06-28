@@ -333,6 +333,11 @@ int number_selector (string st, int start)
     return start;
 }
 
+string postfixer (string eq)
+{
+
+}
+
 int main ()
 {
     vector <string> test_1;
