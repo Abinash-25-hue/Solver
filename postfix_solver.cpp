@@ -337,6 +337,24 @@ string postfixer (string eq)
 {
     stack <char> stacc;
     string output = "";
+
+    for (int index = 0; index < eq.size(); index++)
+    {
+        char c = eq[index], temp;
+        if (c == '(')
+        {
+            stacc.push('(');
+        }
+        else if (c == ')')
+        {
+            while (stacc.top() != '(')
+            {
+                output += stacc.top();
+                stacc.pop();
+            }
+            stacc.pop();
+        }
+    }
 }
 
 int main ()
