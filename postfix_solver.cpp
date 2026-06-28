@@ -335,7 +335,8 @@ int number_selector (string st, int start)
 
 string postfixer (string eq)
 {
-
+    stack <char> stacc;
+    string output = "";
 }
 
 int main ()
