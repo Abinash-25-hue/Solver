@@ -354,6 +354,27 @@ string postfixer (string eq)
             }
             stacc.pop();
         }
+        else if (c == '^')
+        {
+            stacc.push('^');
+        }
+        else if (c == '*' || c == '/')
+        {
+            while (precedence_giver(stacc.top()) >= precedence_giver(c))
+            {
+                output += stacc.top();
+                stacc.pop();
+            }
+            stacc.push(c);
+        }
+        else if (c == '+' || c == '-')
+        {
+            while (precedence_giver(stacc.top()) >= precedence_giver(c))
+            {
+                output += stacc.top();
+                stacc.pop();
+            }
+        }
     }
 }
 
