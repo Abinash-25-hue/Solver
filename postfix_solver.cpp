@@ -350,6 +350,7 @@ string postfixer (string eq)
             while (stacc.top() != '(')
             {
                 output += stacc.top();
+                output += ' ';
                 stacc.pop();
             }
             stacc.pop();
@@ -363,6 +364,7 @@ string postfixer (string eq)
             while (precedence_giver(stacc.top()) >= precedence_giver(c))
             {
                 output += stacc.top();
+                output += ' ';
                 stacc.pop();
             }
             stacc.push(c);
@@ -372,6 +374,7 @@ string postfixer (string eq)
             while (precedence_giver(stacc.top()) >= precedence_giver(c))
             {
                 output += stacc.top();
+                output += ' ';
                 stacc.pop();
             }
         }
