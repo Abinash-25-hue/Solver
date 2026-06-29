@@ -378,6 +378,13 @@ string postfixer (string eq)
                 stacc.pop();
             }
         }
+        else
+        {
+            int till = number_selector(eq, index);
+            string number = string_slicer(eq, index, till);
+            output += number;
+            output += ' ';
+        }
     }
 }
 
