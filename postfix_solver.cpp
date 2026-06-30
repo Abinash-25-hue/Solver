@@ -387,6 +387,12 @@ string postfixer (string eq)
             output += ' ';
         }
     }
+    while (stacc.empty() == false)
+    {
+        output += stacc.top();
+        output += ' ';
+        stacc.pop();
+    }
     return output;
 }
 
