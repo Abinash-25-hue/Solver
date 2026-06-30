@@ -391,6 +391,7 @@ string postfixer (string eq)
             string number = string_slicer(eq, index, till);
             output += number;
             output += ' ';
+            index = till - 1;
         }
     }
     while (stacc.empty() == false)
