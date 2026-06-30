@@ -377,8 +377,9 @@ string postfixer (string eq)
                 output += ' ';
                 stacc.pop();
             }
+            stacc.push(c);
         }
-        else
+        else if ((c >= '0' && c <= '9') || c == '.')
         {
             int till = number_selector(eq, index);
             string number = string_slicer(eq, index, till);
@@ -386,6 +387,7 @@ string postfixer (string eq)
             output += ' ';
         }
     }
+    return output;
 }
 
 int main ()
