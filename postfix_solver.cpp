@@ -361,21 +361,27 @@ string postfixer (string eq)
         }
         else if (c == '*' || c == '/')
         {
-            while (precedence_giver(stacc.top()) >= precedence_giver(c))
+            if (stacc.empty() == false)
             {
-                output += stacc.top();
-                output += ' ';
-                stacc.pop();
+                while (precedence_giver(stacc.top()) >= precedence_giver(c))
+                {
+                    output += stacc.top();
+                    output += ' ';
+                    stacc.pop();
+                }
             }
             stacc.push(c);
         }
         else if (c == '+' || c == '-')
         {
-            while (precedence_giver(stacc.top()) >= precedence_giver(c))
+            if (stacc.empty() == false)
             {
-                output += stacc.top();
-                output += ' ';
-                stacc.pop();
+                while (precedence_giver(stacc.top()) >= precedence_giver(c))
+                {
+                    output += stacc.top();
+                    output += ' ';
+                    stacc.pop();
+                }
             }
             stacc.push(c);
         }
