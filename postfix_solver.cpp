@@ -333,6 +333,11 @@ int number_selector (string st, int start)
     return start;
 }
 
+double exponenter ()
+{
+    
+}
+
 string postfixer (string eq)
 {
     stack <char> stacc;
