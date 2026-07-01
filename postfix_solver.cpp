@@ -222,7 +222,7 @@ bool valid_exponent (string eq)
         {
             number_appeared = true;
         }
-        if (eq[index] == ' ')
+        if (eq[index] == ' ' || eq[index] == '(' || eq[index] == ')')
         {
             number_appeared = false;
         }
