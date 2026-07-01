@@ -205,7 +205,33 @@ bool valid_operator (string str)
 
 bool valid_exponent (string eq)
 {
-    
+    bool symbol_appeared = false;
+    bool number_appeared = false;
+    for (int index = 0; index < eq.size(); index++)
+    {
+        if (eq[index] == '^')
+        {
+            symbol_appeared = true;
+        }
+        if (eq[index] == '+' || eq[index] == '-' || eq[index] == '*' || eq[index] == '/')
+        { 
+            symbol_appeared = false;
+            number_appeared = false;
+        }
+        if (eq[index] >= '0' && eq[index] <= '9')
+        {
+            number_appeared = true;
+        }
+        if (eq[index] == ' ')
+        {
+            number_appeared = false;
+        }
+        if (eq[index] == '.' && symbol_appeared == true && number_appeared == true)
+        {
+            return false;
+        }
+    }
+    return true;
 }
 
 bool valid_decimal (string st)
