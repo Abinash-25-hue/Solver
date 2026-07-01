@@ -203,6 +203,11 @@ bool valid_operator (string str)
     return true;
 }
 
+bool valid_exponent (string eq)
+{
+    
+}
+
 bool valid_decimal (string st)
 {
     bool is_number = false;
