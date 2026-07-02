@@ -574,5 +574,31 @@ int main ()
         }
         cout<< endl;
     }
+    cout<< endl;
+
+
+    vector <string> test_7;
+    test_7.push_back("(2+3)*4");
+    test_7.push_back("2+3^4");
+    test_7.push_back("2+3 ^4");
+    test_7.push_back("2+3^ 4");
+    test_7.push_back("2+3 ^ 4");
+    test_7.push_back("2+3 ^4.2");
+    test_7.push_back("2+3^ 4.2");
+    test_7.push_back("2+3 ^ 4.2");
+
+    for (string s : test_7)
+    {
+        if (valid_exponent(s))
+        {
+            cout<< "True";
+        }
+        else
+        {
+            cout<< "False";
+        }
+        cout<< endl;
+    }
+
     return 0;
 }
