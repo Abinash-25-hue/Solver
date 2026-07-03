@@ -600,5 +600,16 @@ int main ()
         cout<< endl;
     }
 
+    cout<< endl;
+    vector <pair<int, int>> test_8;
+    test_8.push_back({2, 3});
+    test_8.push_back({5, 3});
+    test_8.push_back({3, 1});
+    test_8.push_back({4, 0});
+
+    for (auto x : test_8)
+    {
+        cout<< exponenter(x.first, x.second)<< endl;
+    }
     return 0;
 }
