@@ -452,6 +452,11 @@ string postfixer (string eq)
     return output;
 }
 
+double solver (string eq)
+{
+
+}
+
 int main ()
 {
     vector <string> test_1;
