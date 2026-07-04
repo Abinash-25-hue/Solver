@@ -2,6 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+stack <double> final;
+
 bool valid_brackets(string st)
 {
     stack <char> s;
