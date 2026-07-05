@@ -454,7 +454,7 @@ string postfixer (string eq)
 
 double solver (string eq)
 {
-
+    
 }
 
 int main ()
