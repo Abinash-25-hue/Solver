@@ -454,7 +454,26 @@ string postfixer (string eq)
 
 double solver (string eq)
 {
-    
+    for (int index = 0; index < eq.size(); index++)
+    {
+        
+        if ((eq[index] >= '0' && eq[index] <= '9') || eq[index] == '.')
+        {
+            double num = number_returner(eq, index);
+            final.push(num);
+            index = number_selector(eq, index);
+        }
+        else if (eq[index] == '+')
+        {
+            double a = final.top();
+            final.pop();
+            double b = final.top();
+            final.pop();
+            final.push(a + b);
+        }
+        
+    }
+    return final.top();
 }
 
 int main ()
