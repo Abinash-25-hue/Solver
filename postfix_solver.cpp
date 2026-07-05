@@ -637,5 +637,13 @@ int main ()
     {
         cout<< exponenter(x.first, x.second)<< endl;
     }
+    cout<< endl;
+
+    string eq = "(2+3)+4";
+    string out = postfixer(eq);
+    cout<< out<< endl;
+
+    double answer = solver(out);
+    cout<< answer<< endl;
     return 0;
 }
