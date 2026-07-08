@@ -25,6 +25,12 @@ public class postfix_solver
         return true;  
     }
 
+    public String string_slicer(int start, int finish)
+    {
+        String sliced = eq.substring(start, finish);
+        return sliced;
+    }
+
     public static void main (String[] args)
     {
         Scanner sc = new Scanner (System.in);
