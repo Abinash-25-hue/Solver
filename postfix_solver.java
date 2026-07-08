@@ -16,8 +16,9 @@ public class postfix_solver
         for (int index = 0; index < eq_array.length; index++)
         {
             char c = eq_array[index];
-            if ((c < '(' && c > '9') || (c == ','))
+            if (((c < '(' || c > '9') && (c != ' ')) || (c == ','))
             {
+
                 return false;
             }
         }      
