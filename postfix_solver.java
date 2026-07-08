@@ -55,5 +55,8 @@ public class postfix_solver
                 System.out.println("False");
             }
         }
+        
+        String temp = test_1[1].string_slicer(1, 4);
+        System.out.println(temp);
     }
 }
