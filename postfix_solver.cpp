@@ -479,6 +479,14 @@ double solver (string eq)
             final.pop();
             final.push(a + b);
         }
+        else if (eq[index] == '*')
+        {
+            double a = final.top();
+            final.pop();
+            double b = final.top();
+            final.pop();
+            final.push(a * b);
+        }
     }
     return final.top();
 }
