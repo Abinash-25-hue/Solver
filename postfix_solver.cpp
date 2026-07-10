@@ -477,7 +477,7 @@ double solver (string eq)
             final.pop();
             double b = final.top();
             final.pop();
-            final.push(a + b);
+            final.push(a - b);
         }
         else if (eq[index] == '*')
         {
