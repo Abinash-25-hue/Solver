@@ -10,6 +10,12 @@ public class postfix_solver
         this.eq = eq;
     }
 
+    public boolean valid_brackets ()
+    {
+        ArrayList <Character> stack = new ArrayList<>();
+        
+    }
+
     public boolean valid_symbols ()
     {
         char eq_array[] = eq.toCharArray();
