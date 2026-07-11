@@ -13,7 +13,47 @@ public class postfix_solver
     public boolean valid_brackets ()
     {
         ArrayList <Character> stack = new ArrayList<>();
-        
+        int last = 0;
+
+        for (int index = 0; index < eq.length; index++)
+        {
+            char c = eq[index];
+            if (c == '(' || c == '{' || c == '[')
+            {
+                stack.add(c);
+                last++;
+            }
+            else if (c == ')' || c == ')' || c == ']')
+            {
+                if (stack.isEmpty() == true)
+                {
+                    return false;
+                }
+                if (c == ')' && stack[last] == '(')
+                {
+                    stack.remove(last);
+                    last--;
+                }
+                else if (c == '}' && stack[last] == '{')
+                {
+                    stack.remove(last);
+                    last--;
+                }
+                else if (c == ']' && stack[last] == '[')
+                {
+                    stack.remove(last);
+                    last--;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        if (stack.isEmpty() == true)
+        {
+            return true;
+        }
     }
 
     public boolean valid_symbols ()
