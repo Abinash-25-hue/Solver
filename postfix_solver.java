@@ -15,9 +15,10 @@ public class postfix_solver
         ArrayList <Character> stack = new ArrayList<>();
         int last = 0;
 
-        for (int index = 0; index < eq.length; index++)
+        char [] eq_array = eq.toCharArray();
+        for (int index = 0; index < eq_array.length; index++)
         {
-            char c = eq[index];
+            char c = eq_array[index];
             if (c == '(' || c == '{' || c == '[')
             {
                 stack.add(c);
@@ -29,17 +30,17 @@ public class postfix_solver
                 {
                     return false;
                 }
-                if (c == ')' && stack[last] == '(')
+                if (c == ')' && stack.get(last) == '(')
                 {
                     stack.remove(last);
                     last--;
                 }
-                else if (c == '}' && stack[last] == '{')
+                else if (c == '}' && stack.get(last) == '{')
                 {
                     stack.remove(last);
                     last--;
                 }
-                else if (c == ']' && stack[last] == '[')
+                else if (c == ']' && stack.get(last) == '[')
                 {
                     stack.remove(last);
                     last--;
@@ -54,6 +55,7 @@ public class postfix_solver
         {
             return true;
         }
+        return false;
     }
 
     public boolean valid_symbols ()
