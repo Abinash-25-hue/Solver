@@ -73,6 +73,21 @@ public class postfix_solver
         return true;  
     }
 
+    public boolean valid_operators ()
+    {
+        char [] eqa = eq.toCharArray();
+
+        boolean was_number = false;
+        boolean was_operator = false;
+        boolean was_bracket_open = false;
+        boolean was_bracket_closed = false;
+
+        for (int index = 0; index < eq.length; index++)
+        {
+            
+        }
+    }
+
     public String string_slicer(int start, int finish)
     {
         String sliced = eq.substring(start, finish);
