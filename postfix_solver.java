@@ -105,6 +105,24 @@ public class postfix_solver
                 was_number = false;
                 was_operator = true;
             }
+            if (c == '(')
+            {
+                was_number = false;
+                was_operator = false;
+                was_bracket_open = true;
+                was_bracket_closed = false;
+            }
+            if (c == ')')
+            {
+                if (was_number == false || was_operator == false)
+                {
+                    return false;
+                }
+                was_number = false;
+                was_operator = false;
+                was_bracket_open = false;
+                was_bracket_closed = true;
+            }
         }
         return true;
     }
