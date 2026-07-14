@@ -82,10 +82,31 @@ public class postfix_solver
         boolean was_bracket_open = false;
         boolean was_bracket_closed = false;
 
-        for (int index = 0; index < eq.length; index++)
+        for (int index = 0; index < eqa.length; index++)
         {
             
+            char c = eqa[index];
+
+            if ((c >= '0' && c <= '9') || c == '.')
+            {
+                if (was_number == true)
+                {
+                    return false;
+                }
+                was_number = true;
+                was_operator = false;
+            }
+            if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^')
+            {
+                if (was_operator == true)
+                {
+                    return false;
+                }
+                was_number = false;
+                was_operator = true;
+            }
         }
+        return true;
     }
 
     public String string_slicer(int start, int finish)
@@ -121,5 +142,7 @@ public class postfix_solver
         
         String temp = test_1[1].string_slicer(1, 4);
         System.out.println(temp);
+
+
     }
 }
