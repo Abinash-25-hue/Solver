@@ -10,12 +10,13 @@ public class postfix_solver
         this.eq = eq;
     }
 
-    public boolean valid_brackets ()
+    public boolean valid_brackets (String equation)
     {
         ArrayList <Character> stack = new ArrayList<>();
         int last = 0;
 
-        char [] eq_array = eq.toCharArray();
+        //char [] eq_array = eq.toCharArray();
+        char [] eq_array = equation.toCharArray();
         for (int index = 0; index < eq_array.length; index++)
         {
             char c = eq_array[index];
