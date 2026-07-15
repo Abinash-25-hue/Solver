@@ -161,6 +161,12 @@ public class postfix_solver
         String temp = test_1[1].string_slicer(1, 4);
         System.out.println(temp);
 
+        /*From test_2 onwards all the testcases will passed as argument to the method and not the data members of the object,
+        this is done to make testing more fast and efficient.
+        
+        To do this, the code block that all the functions use to access the 'eq' data member will be commented out and new code 
+        block to execute the argument will be coded. */
+
 
     }
 }
