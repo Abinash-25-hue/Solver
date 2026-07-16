@@ -59,9 +59,10 @@ public class postfix_solver
         return false;
     }
 
-    public boolean valid_symbols ()
+    public boolean valid_symbols (String equation)
     {
-        char eq_array[] = eq.toCharArray();
+        String eq_array = equation.toCharArray();
+        //char eq_array[] = eq.toCharArray();
         for (int index = 0; index < eq_array.length; index++)
         {
             char c = eq_array[index];
