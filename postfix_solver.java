@@ -61,7 +61,7 @@ public class postfix_solver
 
     public static boolean valid_symbols (String equation)
     {
-        String eq_array = equation.toCharArray();
+        char[] eq_array = equation.toCharArray();
         //char eq_array[] = eq.toCharArray();
         for (int index = 0; index < eq_array.length; index++)
         {
