@@ -166,7 +166,10 @@ public class postfix_solver
         this is done to make testing more fast and efficient.
         
         To do this, the code block that all the functions use to access the 'eq' data member will be commented out and new code 
-        block to execute the argument will be coded. */
+        block to execute the argument will be coded. 
+        
+        After testing, all the functions will be reverted back to its original intended operations of performing it on 
+        'eq' data member of the postfix_solver class. */
 
 
     }
