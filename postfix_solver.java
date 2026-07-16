@@ -10,7 +10,7 @@ public class postfix_solver
         this.eq = eq;
     }
 
-    public boolean valid_brackets (String equation)
+    public static boolean valid_brackets (String equation)
     {
         ArrayList <Character> stack = new ArrayList<>();
         int last = 0;
