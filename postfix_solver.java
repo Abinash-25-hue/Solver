@@ -75,9 +75,10 @@ public class postfix_solver
         return true;  
     }
 
-    public boolean valid_operators ()
+    public static boolean valid_operators (String equation)
     {
-        char [] eqa = eq.toCharArray();
+        String eq_array = equation.toCharArray();
+        //char [] eqa = eq.toCharArray();
 
         boolean was_number = false;
         boolean was_operator = false;
