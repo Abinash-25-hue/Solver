@@ -141,13 +141,20 @@ public class postfix_solver
         Scanner sc = new Scanner (System.in);
 
         //ArrayList <String> test_1 = new ArrayList<>();
-        postfix_solver[] test_1 = new postfix_solver[5];
+        /*postfix_solver[] test_1 = new postfix_solver[5];
 
         test_1[0] = new postfix_solver("2+3");
         test_1[1] = new postfix_solver("(2+3)*4");
         test_1[2] = new postfix_solver("  ");
         test_1[3] = new postfix_solver("2+a*4");
-        test_1[4] = new postfix_solver("(2+8);");
+        test_1[4] = new postfix_solver("(2+8);");*/
+
+        ArrayList <String> test_1 = new ArrayList<>();
+        test_1.add("2+3");
+        test_1.add("(2+3)*4");
+        test_1.add("  ");
+        test_1.add("2+a*4");
+        test_1.add("(2+8);");
 
         for (int index = 0; index < 5; index++)
         {
