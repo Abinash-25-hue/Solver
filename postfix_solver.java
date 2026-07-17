@@ -158,7 +158,7 @@ public class postfix_solver
 
         for (int index = 0; index < 5; index++)
         {
-            if (valid_symbols(test_1[index]))
+            if (valid_symbols(test_1.get(index)))
             {
                 System.out.println("True");
             }
