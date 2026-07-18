@@ -136,6 +136,23 @@ public class postfix_solver
         return sliced;
     }
 
+    int precedence_giver (char c)
+    {
+        if (c == '^')
+        {
+            return 5;
+        }
+        else if (c == '*' || c == '/')
+        {
+            return 3;
+        }
+        else if (c == '+' || c == '-')
+        {
+            return 1;
+        }
+        return 0;
+    }
+
     public static void main (String[] args)
     {
         Scanner sc = new Scanner (System.in);
