@@ -198,5 +198,15 @@ public class postfix_solver
         'eq' data member of the postfix_solver class. */
 
 
+        ArrayList <string> test_2 = new ArrayList <>();
+        test_2.add("(2+3)*4");
+        test_2.add("(2+3*4");
+        test_2.add("({}[]){}");
+        test_2.add("(2+3)*((6 +7) -8)");
+        test_2.add(" ");
+        test_2.add("5 ^ 6");
+        test_2.add("{[}]");
+
+
     }
 }
