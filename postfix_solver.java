@@ -207,6 +207,17 @@ public class postfix_solver
         test_2.add("5 ^ 6");
         test_2.add("{[}]");
 
+        for (int index = 0; index < test_2.length; index++)
+        {
+            if (valid_brackets(test_2.get(index)))
+            {
+                System.out.println("True");
+            }
+            else
+            {
+                System.out.println("False");
+            }
+        }
 
     }
 }
