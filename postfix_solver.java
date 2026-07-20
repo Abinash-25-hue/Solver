@@ -219,5 +219,24 @@ public class postfix_solver
             }
         }
 
+        ArrayList <String> test_3 = new ArrayList<>();
+        test_3.add("(2+3)*4");
+        test_3.add("2+ +3");
+        test_3.add("2 * (3 + 4)");
+        test_3.add("(2 + 4)*(3* 2 -)+4");
+        test_3.add("(3*3)+3 - +4");
+
+        for (int index = 0; index < test_3.size(); index++)
+        {
+            if (valid_operators(test_3.get(index)))
+            {
+                System.out.println("True");
+            }
+            else
+            {
+                System.out.println("False");
+            }
+        }
+
     }
 }
