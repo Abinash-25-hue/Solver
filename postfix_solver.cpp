@@ -676,5 +676,11 @@ int main ()
     test_9.push_back("4 * (91 -89)/ 2");
     test_9.push_back("67 *(67 - 67)");
 
+    for (string s : test_9)
+    {
+        string output = postfixer(s);
+        double solution = solver(output);
+        cout<< solution<< endl;
+    }
     return 0;
 }
