@@ -669,6 +669,20 @@ int main ()
     double answer = solver(out);
     cout<< answer<< endl;
 
+
+    vector <string> test_9;
+    test_9.push_back("2*3+4");
+    test_9.push_back("(2 + 3- 1*7)/4");
+    test_9.push_back("1*2/3");
+    test_9.push_back("21* (34 +45)");
+    test_9.push_back("342 + 13 / 13*2");
+
+    for (string s : test_9)
+    {
+        out = postfixer(s);
+        cout<< out<< endl;
+    }
+
     vector <string> test_10;
     test_10.push_back("2+3*4");
     test_10.push_back("(2+3 -1* 5)-9");
