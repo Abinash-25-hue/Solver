@@ -669,14 +669,14 @@ int main ()
     double answer = solver(out);
     cout<< answer<< endl;
 
-    vector <string> test_9;
-    test_9.push_back("2+3*4");
-    test_9.push_back("(2+3 -1* 5)-9");
-    test_9.push_back("2 * 4 -(2 + 4)");
-    test_9.push_back("4 * (91 -89)/ 2");
-    test_9.push_back("67 *(67 - 67)");
+    vector <string> test_10;
+    test_10.push_back("2+3*4");
+    test_10.push_back("(2+3 -1* 5)-9");
+    test_10.push_back("2 * 4 -(2 + 4)");
+    test_10.push_back("4 * (91 -89)/ 2");
+    test_10.push_back("67 *(67 - 67)");
 
-    for (string s : test_9)
+    for (string s : test_10)
     {
         string output = postfixer(s);
         double solution = solver(output);
