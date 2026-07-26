@@ -412,7 +412,7 @@ string postfixer (string eq)
         {
             if (stacc.empty() == false)
             {
-                while (precedence_giver(stacc.top()) >= precedence_giver(c))
+                while (stacc.empty() == false && precedence_giver(stacc.top()) >= precedence_giver(c))
                 {
                     output += stacc.top();
                     output += ' ';
@@ -425,7 +425,7 @@ string postfixer (string eq)
         {
             if (stacc.empty() == false)
             {
-                while (precedence_giver(stacc.top()) >= precedence_giver(c))
+                while (stacc.empty() == false && precedence_giver(stacc.top()) >= precedence_giver(c))
                 {
                     output += stacc.top();
                     output += ' ';
