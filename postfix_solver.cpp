@@ -664,7 +664,7 @@ int main ()
 
     string eq = "(2+3)+4";
     string out = postfixer(eq);
-    cout<< out<< endl;
+    cout<< out<< " : ";
 
     double answer = solver(out);
     cout<< answer<< endl;
