@@ -25,7 +25,7 @@ public class postfix_solver
                 stack.add(c);
                 last++;
             }
-            else if (c == ')' || c == ')' || c == ']')
+            else if (c == ')' || c == '}' || c == ']')
             {
                 if (stack.isEmpty() == true)
                 {
