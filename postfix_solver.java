@@ -13,7 +13,7 @@ public class postfix_solver
     public static boolean valid_brackets (String equation)
     {
         ArrayList <Character> stack = new ArrayList<>();
-        int last = 0;
+        int last = -1;
 
         //char [] eq_array = eq.toCharArray();
         char [] eq_array = equation.toCharArray();
