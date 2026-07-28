@@ -130,6 +130,36 @@ public class postfix_solver
         return true;
     }
 
+    public boolean valid_exponent (String equation)
+    {
+        char [] eq_array = equation.toCharArray();
+
+        boolean number_appeared = false;
+        boolean symbol_appeared = false;
+        for (int index = 0; index < eq_array.length; index++)
+        {
+            char c = eq_array[index];
+
+            if (c == '^')
+            {
+                symbol_appeared = true;
+            }
+            if (c == '+' || c == '-' || c == '*' || c == '/')
+            {
+                symbol_appeared = false;
+                number_appeared = false;
+            }
+            if ((c >= '0' && c <= '9') || c == '.')
+            {
+                number_appeared = true;
+            }
+            if ((symbol_appeared == true && number_appeared = true) && c == '.')
+            {
+                return false;
+            }
+        }
+    }
+
     public String string_slicer(int start, int finish)
     {
         String sliced = eq.substring(start, finish);
