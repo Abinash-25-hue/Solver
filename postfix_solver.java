@@ -158,6 +158,7 @@ public class postfix_solver
                 return false;
             }
         }
+        return true;
     }
 
     public String string_slicer(int start, int finish)
