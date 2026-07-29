@@ -153,7 +153,7 @@ public class postfix_solver
             {
                 number_appeared = true;
             }
-            if ((symbol_appeared == true && number_appeared = true) && c == '.')
+            if ((c == '.') && (symbol_appeared == true) && (number_appeared = true))
             {
                 return false;
             }
