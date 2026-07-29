@@ -215,6 +215,7 @@ public class postfix_solver
                 System.out.println("False");
             }
         }
+        System.out.println();
         
         //String temp = test_1[1].string_slicer(1, 4);
         //System.out.println(temp);
@@ -249,6 +250,7 @@ public class postfix_solver
                 System.out.println("False");
             }
         }
+        System.out.println();
 
         ArrayList <String> test_3 = new ArrayList<>();
         test_3.add("(2+3)*4");
@@ -268,6 +270,7 @@ public class postfix_solver
                 System.out.println("False");
             }
         }
+        System.out.println();
 
     }
 }
