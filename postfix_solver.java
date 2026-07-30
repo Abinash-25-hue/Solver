@@ -80,6 +80,7 @@ public class postfix_solver
         char[] eqa = equation.toCharArray();
         //char [] eqa = eq.toCharArray();
 
+        boolean is_number = false;
         boolean was_number = false;
         boolean was_operator = false;
         boolean was_bracket_open = false;
@@ -92,7 +93,7 @@ public class postfix_solver
 
             if ((c >= '0' && c <= '9') || c == '.')
             {
-                if (was_number == true)
+                if (was_number == true && is_number == false)
                 {
                     return false;
                 }
@@ -117,7 +118,7 @@ public class postfix_solver
             }
             if (c == ')')
             {
-                if (was_number == false || was_operator == false)
+                if (was_number == false && was_operator == true)
                 {
                     return false;
                 }
@@ -125,6 +126,10 @@ public class postfix_solver
                 was_operator = false;
                 was_bracket_open = false;
                 was_bracket_closed = true;
+            }
+            if (c == ' ')
+            {
+                is_number = false;
             }
         }
         return true;
