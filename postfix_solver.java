@@ -277,5 +277,25 @@ public class postfix_solver
         }
         System.out.println();
 
+
+
+        ArrayList <String> test_4 = new ArrayList <>();
+        test_4.add("(2 + 3^2) - 2^ 2");
+        test_4.add("(2 ^6.7) + 3 + 4 ^1");
+        test_4.add("5 ^ (1 + 2)");
+        test_4.add("56 + 11^ 2");
+        test_4.add("500 - (11 ^2.4)");
+
+        for (int index = 0; index < test_4.size(); index++)
+        {
+            if (valid_exponent(test_4.get(index)))
+            {
+                System.out.println("True");
+            }
+            else
+            {
+                System.out.println("False");
+            }
+        }
     }
 }
