@@ -135,7 +135,7 @@ public class postfix_solver
         return true;
     }
 
-    public boolean valid_exponent (String equation)
+    public static boolean valid_exponent (String equation)
     {
         char [] eq_array = equation.toCharArray();
 
