@@ -173,7 +173,7 @@ public class postfix_solver
         char c;
 
         char[] eq_array = toCharArray(equation);
-        for (int index = 0; index < eq_array.size(); index++)
+        for (int index = 0; index < eq_array.length; index++)
         {
             c = eq_array[index];
             if (c >= '0' && c <= '9')
