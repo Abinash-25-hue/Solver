@@ -166,6 +166,43 @@ public class postfix_solver
         return true;
     }
 
+    public static boolean valid_decimal (String equation)
+    {
+        boolean is_number = false;
+        int count = 0;
+        char c;
+
+        char[] eq_array = toCharArray(equation);
+        for (int index = 0; index < eq_array.size(); index++)
+        {
+            c = eq_array[index];
+            if (c >= '0' && c <= '9')
+            {
+                is_number = true;
+            }
+            else if (c == '.')
+            {
+                char temp_c = eq_array[index + 1];
+                if (is_number == false && (temp_c < '0' && temp_c > '9') && temp_c != ' ')
+                {
+                    return false;
+                }
+                count++;
+            }
+            else if (c < '0' && c > '9')
+            {
+                is_number = false;
+                count = 0;
+            }
+
+            if (count > 1)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public String string_slicer(int start, int finish)
     {
         String sliced = eq.substring(start, finish);
