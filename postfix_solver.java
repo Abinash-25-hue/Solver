@@ -334,5 +334,29 @@ public class postfix_solver
                 System.out.println("False");
             }
         }
+        System.out.println();
+
+
+        ArrayList <String> test_5 = new ArrayList<>();
+
+        test_5.add("6.7 * 2");
+        test_5.add(" 8 * 2.4 -1.3");
+        test_5.add("2 + 7.8.8");
+        test_5.add(" 8- 67. ");
+        test_5.add(" .8 + 0.3");
+        test_5.add(" 7 + 89 * . ");
+
+        for (int index = 0; index < test_5.size(); index++)
+        {
+            if (valid_decimal(test_5.get(index)))
+            {
+                System.out.println("True");
+            }
+            else
+            {
+                System.out.println("False");
+            }
+        }
+
     }
 }
