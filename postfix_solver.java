@@ -171,6 +171,7 @@ public class postfix_solver
         boolean is_number = false;
         int count = 0;
         char c;
+        equation += ' ';
 
         char[] eq_array = equation.toCharArray();
         for (int index = 0; index < eq_array.length; index++)
@@ -183,13 +184,13 @@ public class postfix_solver
             else if (c == '.')
             {
                 char temp_c = eq_array[index + 1];
-                if (is_number == false && (temp_c < '0' && temp_c > '9') && temp_c != ' ')
+                if (is_number == false && (temp_c < '0' || temp_c > '9'))
                 {
                     return false;
                 }
                 count++;
             }
-            else if (c < '0' && c > '9')
+            else if (c < '0' || c > '9')
             {
                 is_number = false;
                 count = 0;
