@@ -172,7 +172,7 @@ public class postfix_solver
         int count = 0;
         char c;
 
-        char[] eq_array = to.CharArray(equation);
+        char[] eq_array = equation.toCharArray();
         for (int index = 0; index < eq_array.length; index++)
         {
             c = eq_array[index];
