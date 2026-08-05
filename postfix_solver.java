@@ -210,6 +210,21 @@ public class postfix_solver
         return sliced;
     }
 
+    public static double number_returner (String num, int start)
+    {
+        char number[] = num.toCharArray();
+
+        double wholesum = 0;
+        int index = 0, multiplier = 1;
+        while (number[index] != '.')
+        {
+            int digit = Integer.parseInt(number[index]);
+            wholesum *= 10;
+            wholesum += digit;
+            index++;
+        }
+    }
+
     int precedence_giver (char c)
     {
         if (c == '^')
