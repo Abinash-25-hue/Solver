@@ -214,8 +214,8 @@ public class postfix_solver
     {
         char number[] = num.toCharArray();
 
-        double wholesum = 0;
-        int index = 0, multiplier = 1;
+        double wholesum = 0, multiplier = 1, deci_sum = 0;
+        int index = 0;
         while (number[index] != '.')
         {
             int digit = Integer.parseInt(number[index]);
