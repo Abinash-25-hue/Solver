@@ -234,6 +234,11 @@ public class postfix_solver
         return (wholesum + deci_sum);
     }
 
+    public static int number_selector (String equation)
+    {
+
+    }
+
     int precedence_giver (char c)
     {
         if (c == '^')
