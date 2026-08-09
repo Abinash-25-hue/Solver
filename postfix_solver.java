@@ -223,6 +223,15 @@ public class postfix_solver
             wholesum += digit;
             index++;
         }
+        if (number[index] == '.')
+        {
+            index++;
+            int digit = Integer.parseInt(number[index]);
+            multiplier /= 10;
+            deci_sum += (digit * multiplier);
+        }
+
+        return (wholesum + deci_sum);
     }
 
     int precedence_giver (char c)
