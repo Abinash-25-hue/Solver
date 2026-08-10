@@ -218,7 +218,9 @@ public class postfix_solver
         int index = 0;
         while (number[index] != '.')
         {
-            int digit = Integer.parseInt(number[index]);
+            char c = number[index];
+            int digit = c;
+            digit -= 65;
             wholesum *= 10;
             wholesum += digit;
             index++;
@@ -226,9 +228,11 @@ public class postfix_solver
         if (number[index] == '.')
         {
             index++;
-            int digit = Integer.parseInt(number[index]);
+            char c = number[index];
+            int digit = c;
+            digit -= 65;
             multiplier /= 10;
-            deci_sum += (digit * multiplier);
+            deci_sum += ((double)digit * multiplier);
         }
 
         return (wholesum + deci_sum);
