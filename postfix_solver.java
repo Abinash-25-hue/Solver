@@ -215,7 +215,7 @@ public class postfix_solver
         char number[] = num.toCharArray();
 
         double wholesum = 0, multiplier = 1, deci_sum = 0;
-        int index = 0;
+        int index = start;
         while (number[index] != '.')
         {
             char c = number[index];
