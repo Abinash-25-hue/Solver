@@ -240,9 +240,9 @@ public class postfix_solver
 
     public static int number_selector (String equation, int start)
     { 
-        int final = start;
+        int fin = start;
 
-        return final;
+        return fin;
     }
 
     int precedence_giver (char c)
