@@ -238,8 +238,8 @@ public class postfix_solver
         return (wholesum + deci_sum);
     }
 
-    public static int number_selector (String equation)
-    {
+    public static int number_selector (String equation, int start)
+    { 
 
     }
 
