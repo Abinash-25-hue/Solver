@@ -241,7 +241,8 @@ public class postfix_solver
     public static int number_selector (String equation, int start)
     { 
         int fin = start;
-
+        char []eq_array = equation.toCharArray()
+    
         return fin;
     }
 
