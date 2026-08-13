@@ -400,5 +400,20 @@ public class postfix_solver
             }
         }
 
+
+        // Test 6
+        ArrayList <String> sliced = new ArrayList<>();
+        String temp_1;
+        temp_1 = string_slicer("abcde", 1, 3);
+        sliced.add(temp_1);
+        temp_1 = string_slicer("  ard hi ", 1, 4);
+        sliced.add(temp_1);
+        temp_1 = string_slicer("   ", 1, 1);
+        sliced.add(temp_1);
+        temp_1 = string_slicer(" abced1_@", 0, 6);
+        sliced.add(temp_1);
+        temp_1 = string_slicer("7*67 sugcio ", 2, 7);
+        sliced.add(temp_1);
+
     }
 }
