@@ -204,7 +204,7 @@ public class postfix_solver
         return true;
     }
 
-    public String string_slicer(String eqa, int start, int finish)
+    public static String string_slicer(String eqa, int start, int finish)
     {
         String sliced = eq.substring(start, finish);
         return sliced;
