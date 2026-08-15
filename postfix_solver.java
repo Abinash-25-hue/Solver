@@ -429,5 +429,11 @@ public class postfix_solver
         temp_1 = string_slicer("7*67 sugcio ", 2, 7);
         sliced.add(temp_1);
 
+        for (int index = 0; index < 5; index++)
+        {
+            String res = sliced.get(index);
+            System.out.println(res);
+        }
+
     }
 }
