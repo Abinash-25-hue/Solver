@@ -435,5 +435,8 @@ public class postfix_solver
             System.out.println(res);
         }
 
+
+        ArrayList <int> test_7 = new ArrayList<>();
+        
     }
 }
