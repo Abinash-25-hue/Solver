@@ -436,7 +436,7 @@ public class postfix_solver
         }
 
 
-        ArrayList <int> test_7 = new ArrayList<>();
-        
+        ArrayList <Double> test_7 = new ArrayList<>();
+
     }
 }
