@@ -437,6 +437,24 @@ public class postfix_solver
 
 
         ArrayList <Double> test_7 = new ArrayList<>();
+        double t7;
+        t7 = number_returner("345", 0);
+        test_7.add(t7);
+        t7 = number_returner(" 422", 1);
+        test_7.add(t7);
+        t7 = number_returner("12.045", 0);
+        test_7.add(t7);
+        t7 = number_returner("  776.910", 2);
+        test_7.add(t7);
+        t7 = number_returner(" 34.0024", 1);
+        test_7.add(t7);
+        t7 = number_returner(" 6767.980", 1);
+        test_7.add(t7);
+
+        for (int index = 0; index < 6; index++)
+        {
+            System.out.println(test_7.get(index));
+        }
 
     }
 }
