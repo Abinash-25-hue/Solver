@@ -696,5 +696,13 @@ int main ()
         double solution = solver(output);
         cout<< solution<< endl;
     }
+
+    /*NOTICE : I noticed that compiling the "postfix_solver.cpp" file was taking too long, so it has been decided 
+    that the functions will be declared and initialized in different files which will then be used here as 
+    header files.
+    
+    Gradually the functions will be initialised to separate files and the functions here will get commented out 
+    starting from this commit. */
+    
     return 0;
 }
