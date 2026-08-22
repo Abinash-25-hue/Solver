@@ -1,5 +1,6 @@
 #include<iostream>
 #include<bits/stdc++.h>
+#include"postfix_functions.hpp"
 using namespace std;
 
 stack <double> final;
