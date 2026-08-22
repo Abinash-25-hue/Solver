@@ -5,7 +5,7 @@ using namespace std;
 
 stack <double> final;
 
-bool valid_brackets(string st)
+/*bool valid_brackets(string st)
 {
     stack <char> s;
     for (int index = 0; index < st.size(); index++)
@@ -43,7 +43,7 @@ bool valid_brackets(string st)
         return true;
     }
     return false;
-}
+}*/
 
 bool valid_symbol (string st)
 {
