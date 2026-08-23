@@ -43,3 +43,18 @@ bool valid_brackets(string st)
     }
     return false;
 }
+
+bool valid_symbol (string st)
+{
+    for (int index = 0; index < st.size(); index++)
+    {
+        if ((st[index] < '(' || st[index] > '9') || st[index] == ',')
+        {
+            if (st[index] != '^' && st[index] != ' ')
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
