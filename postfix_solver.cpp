@@ -45,7 +45,7 @@ stack <double> final;
     return false;
 }*/
 
-bool valid_symbol (string st)
+/*bool valid_symbol (string st)
 {
     for (int index = 0; index < st.size(); index++)
     {
@@ -58,7 +58,7 @@ bool valid_symbol (string st)
         }
     }
     return true;
-}
+}*/
 
 bool valid_operators (string st)
 {
