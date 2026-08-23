@@ -513,6 +513,7 @@ int main ()
     test_1.push_back("{(})");
     test_1.push_back("");
 
+    cout<< endl<< "Test 1 : "<< endl<< endl;
     for (string str : test_1)
     {
         if (valid_brackets(str))
@@ -537,7 +538,7 @@ int main ()
     test_2.push_back(precedence_giver('a'));
     test_2.push_back(precedence_giver(' '));
 
-    cout<< endl;
+    cout<< endl<< endl<< "Test 2 : "<< endl<< endl;
     for (int x : test_2)
     {
         cout<< x<< endl;
@@ -550,7 +551,7 @@ int main ()
     test_3.push_back(string_slicer("abcde", -7, 4));
     test_3.push_back(string_slicer("abcde", 4, 1));
 
-    cout<< endl;
+    cout<< endl<< endl<< "Test 3: "<< endl<< endl;
     for (string x : test_3)
     {
         cout<< x<< endl;
@@ -565,6 +566,7 @@ int main ()
     test_4.push_back(" (4 -9) * . + 7");
     test_4.push_back("");
 
+    cout<< endl<< "Test 4 : "<< endl<< endl;
     for (string s : test_4)
     {
         if (valid_decimal(s))
