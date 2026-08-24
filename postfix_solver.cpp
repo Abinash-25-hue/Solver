@@ -133,7 +133,7 @@ bool valid_operators (string st)
     }
 }
 
-bool valid_operator (string str)
+/*bool valid_operator (string str)
 {
     bool was_operator = false;
     bool was_number = false;
@@ -204,7 +204,7 @@ bool valid_operator (string str)
 
     }
     return true;
-}
+}*/
 
 bool valid_exponent (string eq)
 {
