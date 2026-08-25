@@ -206,7 +206,7 @@ bool valid_operators (string st)
     return true;
 }*/
 
-bool valid_exponent (string eq)
+/*bool valid_exponent (string eq)
 {
     bool symbol_appeared = false;
     bool number_appeared = false;
@@ -236,7 +236,7 @@ bool valid_exponent (string eq)
         }
     }
     return true;
-}
+}*/
 
 bool valid_decimal (string st)
 {
