@@ -238,7 +238,7 @@ bool valid_operators (string st)
     return true;
 }*/
 
-bool valid_decimal (string st)
+/*bool valid_decimal (string st)
 {
     bool is_number = false;
     int ascii, count = 0;
@@ -274,7 +274,7 @@ bool valid_decimal (string st)
         }
     }
     return true;
-}
+}*/
 
 double number_returner (string st, int start)
 {
