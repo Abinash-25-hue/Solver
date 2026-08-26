@@ -60,7 +60,7 @@ stack <double> final;
     return true;
 }*/
 
-bool valid_operators (string st)
+/*bool valid_operators (string st)
 {
     bool is_number = false, is_operator = false, was_bracket_open = false, was_bracket_closed = false;
     if (st[0] >= '0' && st[0] <= '9')
@@ -131,7 +131,7 @@ bool valid_operators (string st)
             }
         }
     }
-}
+}*/
 
 /*bool valid_operator (string str)
 {
