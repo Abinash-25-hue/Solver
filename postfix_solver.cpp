@@ -276,7 +276,7 @@ stack <double> final;
     return true;
 }*/
 
-double number_returner (string st, int start)
+/*double number_returner (string st, int start)
 {
     stack <int> stuc;
     double final = 0, divid = 0.1;
@@ -321,7 +321,7 @@ double number_returner (string st, int start)
     }
 
     return final;
-}
+}*/
 
 int precedence_giver (char symbol)
 {
