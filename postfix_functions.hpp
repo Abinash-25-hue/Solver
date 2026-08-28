@@ -248,3 +248,20 @@ double number_returner (string st, int start)
 
     return final;
 }
+
+int precedence_giver (char symbol)
+{
+    if (symbol == '^')
+    {
+        return 5;
+    }
+    else if (symbol == '*' || symbol == '/')
+    {
+        return 3;
+    }
+    else if (symbol == '+' || symbol == '-')
+    {
+        return 1;
+    }
+    return 0;
+}
