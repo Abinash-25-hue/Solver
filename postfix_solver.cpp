@@ -323,7 +323,7 @@ stack <double> final;
     return final;
 }*/
 
-int precedence_giver (char symbol)
+/*int precedence_giver (char symbol)
 {
     if (symbol == '^')
     {
@@ -338,7 +338,7 @@ int precedence_giver (char symbol)
         return 1;
     }
     return 0;
-}
+}*/
 
 string string_slicer (string st, int start, int end)
 {
