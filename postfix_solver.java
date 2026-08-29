@@ -282,6 +282,25 @@ public class postfix_solver
         return 0;
     }
 
+    public static double exponenter (double num, int exponent)
+    {
+        int mul = num;
+        if (exponent == 0)
+        {
+            return 1;
+        }
+        if (exponent == 1)
+        {
+            return num;
+        }
+        while (exponent > 1)
+        {
+            num *= mul;
+            exponent--;
+        }
+        return num;
+    }
+
     public static void main (String[] args)
     {
         Scanner sc = new Scanner (System.in);
