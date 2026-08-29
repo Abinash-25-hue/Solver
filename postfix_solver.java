@@ -284,7 +284,7 @@ public class postfix_solver
 
     public static double exponenter (double num, int exponent)
     {
-        int mul = num;
+        double mul = num;
         if (exponent == 0)
         {
             return 1;
