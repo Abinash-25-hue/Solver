@@ -340,7 +340,7 @@ stack <double> final;
     return 0;
 }*/
 
-string string_slicer (string st, int start, int end)
+/*string string_slicer (string st, int start, int end)
 {
     if (start > end)
     {
@@ -356,7 +356,7 @@ string string_slicer (string st, int start, int end)
         final += st[index];
     }
     return final;
-}
+}*/
 
 int number_selector (string st, int start)
 {
