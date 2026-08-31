@@ -358,7 +358,7 @@ stack <double> final;
     return final;
 }*/
 
-int number_selector (string st, int start)
+/*int number_selector (string st, int start)
 {
     int ascii = st[++start];
     while ((ascii >= 48 && ascii <= 57) || (ascii == 46))
@@ -366,7 +366,7 @@ int number_selector (string st, int start)
         ascii = st[++start];
     }
     return start;
-}
+}*/
 
 double exponenter (double base, int power)
 {
