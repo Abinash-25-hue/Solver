@@ -265,7 +265,7 @@ public class postfix_solver
         return fin;
     }
 
-    int precedence_giver (char c)
+    public static int precedence_giver (char c)
     {
         if (c == '^')
         {
