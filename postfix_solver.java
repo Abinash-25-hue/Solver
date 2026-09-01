@@ -475,5 +475,24 @@ public class postfix_solver
             System.out.println(test_7.get(index));
         }
 
+
+        ArrayList <Integer> test_8 = new ArrayList<>();
+        int t8;
+        t8 = number_selector("809 ", 0);
+        test_8.add(t8);
+        t8 = number_selector(" 2.98 ", 1);
+        test_8.add(t8);
+        t8 = number_selector(" 09  768", 5);
+        test_8.add(t8);
+        t8 = number_selector(" aty 53.23 ", 5);
+        test_8.add(t8);
+        t8 = number_selector("342ajn ", 0);
+        test_8.add(t8);
+        t8 = number_selector("cef80.92 ", 3);
+        test_8.add(t8);
+        t8 = number_selector("  24.21qewd ", 2);
+        test_8.add(t8);
+
+
     }
 }
