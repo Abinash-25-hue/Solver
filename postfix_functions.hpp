@@ -293,3 +293,18 @@ int number_selector (string st, int start)
     }
     return start;
 }
+
+double exponenter (double base, int power)
+{
+    double multiplier = base;
+    if (power == 0)
+    {
+        return 1;
+    }
+    while (power > 1)
+    {
+        base *= multiplier;
+        power--;
+    }
+    return base;
+}
