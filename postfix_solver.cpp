@@ -368,7 +368,7 @@ stack <double> final;
     return start;
 }*/
 
-double exponenter (double base, int power)
+/*double exponenter (double base, int power)
 {
     double multiplier = base;
     if (power == 0)
@@ -381,7 +381,7 @@ double exponenter (double base, int power)
         power--;
     }
     return base;
-}
+}*/
 
 string postfixer (string eq)
 {
