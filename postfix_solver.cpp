@@ -383,7 +383,7 @@ stack <double> final;
     return base;
 }*/
 
-string postfixer (string eq)
+/*string postfixer (string eq)
 {
     stack <char> stacc;
     string output = "";
@@ -451,7 +451,7 @@ string postfixer (string eq)
         stacc.pop();
     }
     return output;
-}
+}*/
 
 double solver (string eq)
 {
