@@ -308,3 +308,73 @@ double exponenter (double base, int power)
     }
     return base;
 }
+
+string postfixer (string eq)
+{
+    stack <char> stacc;
+    string output = "";
+
+    for (int index = 0; index < eq.size(); index++)
+    {
+        char c = eq[index], temp;
+        if (c == '(')
+        {
+            stacc.push('(');
+        }
+        else if (c == ')')
+        {
+            while (stacc.top() != '(')
+            {
+                output += stacc.top();
+                output += ' ';
+                stacc.pop();
+            }
+            stacc.pop();
+        }
+        else if (c == '^')
+        {
+            stacc.push('^');
+        }
+        else if (c == '*' || c == '/')
+        {
+            if (stacc.empty() == false)
+            {
+                while (stacc.empty() == false && precedence_giver(stacc.top()) >= precedence_giver(c))
+                {
+                    output += stacc.top();
+                    output += ' ';
+                    stacc.pop();
+                }
+            }
+            stacc.push(c);
+        }
+        else if (c == '+' || c == '-')
+        {
+            if (stacc.empty() == false)
+            {
+                while (stacc.empty() == false && precedence_giver(stacc.top()) >= precedence_giver(c))
+                {
+                    output += stacc.top();
+                    output += ' ';
+                    stacc.pop();
+                }
+            }
+            stacc.push(c);
+        }
+        else if ((c >= '0' && c <= '9') || c == '.')
+        {
+            int till = number_selector(eq, index);
+            string number = string_slicer(eq, index, till);
+            output += number;
+            output += ' ';
+            index = till - 1;
+        }
+    }
+    while (stacc.empty() == false)
+    {
+        output += stacc.top();
+        output += ' ';
+        stacc.pop();
+    }
+    return output;
+}
