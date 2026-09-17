@@ -493,6 +493,10 @@ public class postfix_solver
         t8 = number_selector("  24.21qewd ", 2);
         test_8.add(t8);
 
-
+        for (int index = 0; index < test_8.size(); index++)
+        {
+            System.out.println(test_8.get(index));
+        }
+        
     }
 }
