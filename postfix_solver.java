@@ -230,7 +230,6 @@ public class postfix_solver
 
         double wholesum = 0, multiplier = 1, deci_sum = 0;
         int index = start;
-        System.out.println("\nYes");
         while (index < number.length && number[index] != '.')
         {
             char c = number[index];
