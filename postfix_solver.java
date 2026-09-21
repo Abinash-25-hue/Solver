@@ -230,23 +230,28 @@ public class postfix_solver
 
         double wholesum = 0, multiplier = 1, deci_sum = 0;
         int index = start;
-        while (number[index] != '.')
+        System.out.println("\nYes");
+        while (index < number.length && number[index] != '.')
         {
             char c = number[index];
-            int digit = c;
-            digit -= 65;
+            int digit = c - '0';
+            //digit -= '0';
             wholesum *= 10;
             wholesum += digit;
             index++;
         }
-        if (number[index] == '.')
+        if (index < number.length && number[index] == '.')
         {
             index++;
+            while (index < number.length)
+            {
             char c = number[index];
-            int digit = c;
-            digit -= 65;
+            int digit = c - '0';
+            //digit -= '0';
             multiplier /= 10;
             deci_sum += ((double)digit * multiplier);
+            index++;
+            }
         }
 
         return (wholesum + deci_sum);
