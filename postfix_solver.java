@@ -261,7 +261,7 @@ public class postfix_solver
         int fin = start;
         char []eq_array = equation.toCharArray();
 
-        while ((eq_array[fin] >= '0' && eq_array[fin] <= '9') || eq_array[fin] == '.')
+        while (fin < eq_array.length && ((eq_array[fin] >= '0' && eq_array[fin] <= '9') || eq_array[fin] == '.'))
         {
             fin++;
         }
