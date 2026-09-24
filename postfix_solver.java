@@ -307,7 +307,11 @@ public class postfix_solver
 
     public static String postfixer (String equation)
     {
+        char []eq = equation.toCharArray();
+        Deque <Character> stacc = new ArrayDeque <>();
+        String final = "";
 
+        return final;
     }
 
     public static void main (String[] args)
