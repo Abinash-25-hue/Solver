@@ -305,6 +305,11 @@ public class postfix_solver
         return num;
     }
 
+    public static String postfixer (String equation)
+    {
+
+    }
+
     public static void main (String[] args)
     {
         Scanner sc = new Scanner (System.in);
