@@ -309,9 +309,9 @@ public class postfix_solver
     {
         char []eq = equation.toCharArray();
         Deque <Character> stacc = new ArrayDeque <>();
-        String final = "";
+        String f = "";
 
-        return final;
+        return f;
     }
 
     public static void main (String[] args)
