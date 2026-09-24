@@ -501,6 +501,24 @@ public class postfix_solver
         {
             System.out.println(test_8.get(index - 1));
         }
+
+
+        ArrayList <Character> test_9 = new ArrayList <> ();
+        test_9.add('*');
+        test_9.add('+');
+        test_9.add('=');
+        test_9.add('^');
+        test_9.add('a');
+        test_9.add('-');
+        test_9.add(' ');
+        test_9.add('/');
+        test_9.add('%');
+
+        for (int index = 0; index < test_9.size(); index++)
+        {
+            int precedence = precedence_giver(test_9.get(index));
+            System.out.println(test_9.get(index) + " : " + precedence);
+        }
         
     }
 }
