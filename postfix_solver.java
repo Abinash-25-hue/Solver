@@ -311,6 +311,14 @@ public class postfix_solver
         Deque <Character> stacc = new ArrayDeque <>();
         String f = "";
 
+        int index = 0, kindex = 0;
+        while (index < eq.length)
+        {
+            char c = eq[index];
+
+
+        }
+
         return f;
     }
 
