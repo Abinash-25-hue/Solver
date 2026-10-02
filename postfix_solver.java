@@ -556,5 +556,9 @@ public class postfix_solver
         power = exponenter(1.5, 3);
         test_10.add(power);
         
+        for (int index = 0; index < test_10.size() - 1; index++)
+        {   
+            System.out.println(test_10.get(index));
+        }
     }
 }
