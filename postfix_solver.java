@@ -537,5 +537,24 @@ public class postfix_solver
             System.out.println(test_9.get(index) + " : " + precedence);
         }
         
+
+        ArrayList <Integer> test_10 = new ArrayList <>();
+
+        double power;
+        power = exponenter(2, 3);
+        test_10.add(power);
+        power = exponenter(2.5, 2);
+        test_10.add(power);
+        power = exponenter(7.4, 3);
+        test_10.add(power);
+        power = exponenter(15, 3);
+        test_10.add(power);
+        power = exponenter(1, 10);
+        test_10.add(power);
+        power = exponenter(10, 5);
+        test_10.add(power);
+        power = exponenter(1.5, 3);
+        test_10.add(power);
+        
     }
 }
