@@ -538,7 +538,7 @@ public class postfix_solver
         }
         
 
-        ArrayList <Integer> test_10 = new ArrayList <>();
+        ArrayList <Double> test_10 = new ArrayList <>();
 
         double power;
         power = exponenter(2, 3);
