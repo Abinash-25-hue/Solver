@@ -453,7 +453,7 @@ stack <double> final;
     return output;
 }*/
 
-double solver (string eq)
+/*double solver (string eq)
 {
     for (int index = 0; index < eq.size(); index++)
     {
@@ -498,7 +498,7 @@ double solver (string eq)
         }
     }
     return final.top();
-}
+}*/
 
 int main ()
 {
