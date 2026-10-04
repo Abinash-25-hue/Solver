@@ -378,3 +378,51 @@ string postfixer (string eq)
     }
     return output;
 }
+
+double solver (string eq)
+{
+    for (int index = 0; index < eq.size(); index++)
+    {
+        
+        if ((eq[index] >= '0' && eq[index] <= '9') || eq[index] == '.')
+        {
+            double num = number_returner(eq, index);
+            final.push(num);
+            index = number_selector(eq, index);
+        }
+        else if (eq[index] == '+')
+        {
+            double a = final.top();
+            final.pop();
+            double b = final.top();
+            final.pop();
+            final.push(a + b);
+        }
+        else if (eq[index] == '-')
+        {
+            double a = final.top();
+            final.pop();
+            double b = final.top();
+            final.pop();
+            final.push(b - a); //
+        }
+        else if (eq[index] == '*')
+        {
+            double a = final.top();
+            final.pop();
+            double b = final.top();
+            final.pop();
+            final.push(a * b);
+        }
+        else if (eq[index] == '/')
+        {
+            double a = final.top();
+            final.pop();
+            double b = final.top();
+            final.pop();
+            final.push(b / a);
+        }
+    }
+    return final.top();
+}
+
