@@ -4,7 +4,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-stack <double> final;
+
 
 bool valid_brackets(string st)
 {
@@ -383,6 +383,7 @@ string postfixer (string eq)
 
 double solver (string eq)
 {
+    stack <double> final;
     for (int index = 0; index < eq.size(); index++)
     {
         
