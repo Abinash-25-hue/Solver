@@ -316,6 +316,54 @@ public class postfix_solver
         {
             char c = eq[index];
 
+            if (c == '(')
+            {
+                stacc.push('(');
+            }
+            else if (c == ')')
+            {
+                // char temp;
+                while (stacc.peek() != '(')
+                {
+                    char temp = stacc.peek();
+                    f += temp;
+                    f += " ";
+                    stacc.pop();
+                    
+                }
+                stacc.pop();
+            }
+            else if (c == '^')
+            {
+
+            }
+            else if (c == '*' || c == '/')
+            {
+                while (precedence_giver(stacc.peek()) >= precedence_giver(c))
+                {
+                    f += stacc.peek();
+                    f += ' ';
+                    stacc.pop();
+                }
+                stacc.push(c);
+            }
+            else if (c == '+' || c == '-')
+            {
+                while (precedence_giver(stacc.peek()) >= precedence_giver(c))
+                {
+                    f += stacc.peek();
+                    f += ' ';
+                    stacc.pop();
+                }
+                stacc.push(c);
+            }
+            else
+            {
+                int end = number_selector(equation, index);
+                String number = string_slicer(equation, index, end);
+                f += number;
+                f += ' ';
+            }
 
         }
 
