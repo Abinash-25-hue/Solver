@@ -335,7 +335,7 @@ public class postfix_solver
             }
             else if (c == '^')
             {
-
+                stacc.push('^');
             }
             else if (c == '*' || c == '/')
             {
